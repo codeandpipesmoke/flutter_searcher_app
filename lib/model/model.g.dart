@@ -7,7 +7,7 @@ part of 'model.dart';
 // **************************************************************************
 
 Category _$CategoryFromJson(Map<String, dynamic> json) => Category(
-  json['id'] as String,
+  json['id'] as int,
   json['name'] as String,
   json['description'] as String,
 );
@@ -19,9 +19,9 @@ Map<String, dynamic> _$CategoryToJson(Category instance) => <String, dynamic>{
 };
 
 Person _$PersonFromJson(Map<String, dynamic> json) => Person(
-  id: json['id'] as String,
-  category_id: json['category_id'] as String,
-  city_id: json['city_id'] as String,
+  id: json['id'] as int,
+  category_id: json['category_id'] as int,
+  city_id: json['city_id'] as int,
   name: json['name'] as String,
   description: json['description'] as String,
   web: json['web'] as String,

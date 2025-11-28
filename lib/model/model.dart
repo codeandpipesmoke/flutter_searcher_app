@@ -13,22 +13,21 @@ part 'model.g.dart';
 class Category {
   Category(this.id, this.name, this.description);
 
-  final String id;
+  final int id;
   final String name;
   final String description;
 
-  factory Category.fromJson(dynamic json) =>
-      _$CategoryFromJson(json);
+  factory Category.fromJson(dynamic json) => _$CategoryFromJson(json);
   dynamic toJson() => _$CategoryToJson(this);
 
   //Map<String, dynamic> toJson() => CategoryToJson(this);
 
-/*
+  /*
   factory CategoriesModel.fromJson(dynamic json) =>
       _$CategoriesModelFromJson(json);
   dynamic toJson() => _$CategoriesModelToJson(this);
 */
-/*
+  /*
   CategoriesModel.fromJson(Map<String, dynamic> json)
       : id = json['id'] as String,
         name = json['name'] as String,
@@ -37,14 +36,13 @@ class Category {
  */
 }
 
-
 @JsonSerializable()
 class Person {
-  final String id;
+  final int id;
   // ignore: non_constant_identifier_names
-  final String category_id;
+  final int category_id;
   // ignore: non_constant_identifier_names
-  final String city_id;
+  final int city_id;
   final String name;
   final String description;
   final String web;
