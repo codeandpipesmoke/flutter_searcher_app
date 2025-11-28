@@ -2,15 +2,16 @@
 // Posted by awaik
 // Retrieved 2025-11-27, License - CC BY-SA 4.0
 
+/*
 prefixIcon: IconButton(
-onPressed: () {
+onPressed = () {
 print('search button pressed');
 },
-icon: Icon(Icons.search),
+icon = Icon(Icons.search),
 ),
 suffixIcon: Container(
-width: 100,
-child: Row(
+width = 100,
+child = Row(
 children: [
 IconButton(
 onPressed: () {
@@ -27,3 +28,4 @@ icon: Icon(Icons.mic),
 ],
 ),
 ),
+*/

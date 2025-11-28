@@ -23,7 +23,11 @@ class WidgetTree extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Bottom navigator'),
+        title: Text('Kereső APP', style: TextStyle(
+          fontWeight: FontWeight.bold,
+          fontSize: 18,
+        ),),
+        backgroundColor: Colors.cyan,
         actions: [
           IconButton(
             onPressed: () async {

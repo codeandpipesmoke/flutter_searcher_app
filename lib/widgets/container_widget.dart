@@ -14,14 +14,17 @@ class ContainerWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
-      padding: EdgeInsets.all(10.0),
+      padding: EdgeInsets.all(0.0),
       child: Card(
         child: Padding(
-          padding: EdgeInsets.all(20.0),
+          padding: EdgeInsets.only(top: 10, right: 12, bottom: 10, left: 20),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(name, style: TextStyle(fontWeight: FontWeight.bold)),
+              Text(
+                name,
+                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+              ),
               Text(description),
             ],
           ),
