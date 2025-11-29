@@ -17,10 +17,7 @@ class _NavbarWidgetState extends State<NavbarWidget> {
         return NavigationBar(
           destinations: [
             NavigationDestination(icon: Icon(Icons.home), label: 'Kezdőlap'),
-            NavigationDestination(
-              icon: Icon(Icons.favorite),
-              label: 'Kedvencek',
-            ),
+            NavigationDestination(icon: Icon(Icons.star), label: 'Kedvencek'),
             NavigationDestination(icon: Icon(Icons.add_card), label: 'Új'),
             NavigationDestination(
               icon: Icon(Icons.login),

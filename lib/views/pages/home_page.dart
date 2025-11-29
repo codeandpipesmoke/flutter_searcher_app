@@ -2,6 +2,7 @@
 import 'dart:convert';
 import 'dart:async';
 import 'package:bottom_tab_bar/model/model.dart';
+import 'package:bottom_tab_bar/views/pages/persons_page.dart';
 //import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
@@ -62,9 +63,20 @@ class _HomePageState extends State<HomePage> {
           return ListView(
             children: [
               for (var category in snapshot.requireData)
-                ContainerWidget(
-                  name: category.name,
-                  description: category.description,
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (_) => PersonsPage(id: category.id),
+                      ),
+                    );
+                  },
+                  child: ContainerWidget(
+                    id: category.id,
+                    name: category.name,
+                    description: category.description,
+                  ),
                 ),
             ],
           );

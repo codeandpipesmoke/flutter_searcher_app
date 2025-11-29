@@ -1,12 +1,15 @@
+//import 'package:bottom_tab_bar/views/pages/persons_page.dart';
 import 'package:flutter/material.dart';
 
 class ContainerWidget extends StatelessWidget {
   const ContainerWidget({
     super.key,
+    required this.id,
     required this.name,
     required this.description,
   });
 
+  final int id;
   final String name;
   final String description;
 
