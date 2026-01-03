@@ -6,8 +6,6 @@ import 'package:bottom_tab_bar/model/model.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
-import '../../widgets/container_widget.dart';
-
 class PersonsPage extends StatefulWidget {
   const PersonsPage({super.key, required this.id});
 

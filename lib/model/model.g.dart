@@ -9,6 +9,7 @@ part of 'model.dart';
 Category _$CategoryFromJson(Map<String, dynamic> json) => Category(
   (json['id'] as num).toInt(),
   (json['icon_id'] as num).toInt(),
+  json['icon_ext'] as String,
   json['name'] as String,
   json['description'] as String,
 );
@@ -16,38 +17,45 @@ Category _$CategoryFromJson(Map<String, dynamic> json) => Category(
 Map<String, dynamic> _$CategoryToJson(Category instance) => <String, dynamic>{
   'id': instance.id,
   'icon_id': instance.icon_id,
+  'icon_ext': instance.icon_ext,
   'name': instance.name,
   'description': instance.description,
 };
 
 Company _$CompanyFromJson(Map<String, dynamic> json) => Company(
   (json['id'] as num).toInt(),
-  (json['icon_id'] as num?)?.toInt(),
+  (json['icon_id'] as num).toInt(),
+  json['icon_ext'] as String,
   json['name'] as String,
   json['description'] as String,
-  json['address'] as String?,
-  json['houseNumber'] as String?,
+  json['city_zip'] as String,
+  json['city_name'] as String,
+  json['address'] as String,
+  json['house_number'] as String,
   json['phone'] as String,
-  json['phone2'] as String?,
-  json['web'] as String?,
+  json['phone2'] as String,
+  json['web'] as String,
   json['email'] as String,
-  json['googleMapUrl'] as String?,
-  json['longitude'] as String?,
-  json['latitude'] as String?,
+  json['google_map_url'] as String,
+  json['longitude'] as String,
+  json['latitude'] as String,
 );
 
 Map<String, dynamic> _$CompanyToJson(Company instance) => <String, dynamic>{
   'id': instance.id,
   'icon_id': instance.icon_id,
+  'icon_ext': instance.icon_ext,
   'name': instance.name,
   'description': instance.description,
+  'city_zip': instance.city_zip,
+  'city_name': instance.city_name,
   'address': instance.address,
-  'houseNumber': instance.houseNumber,
+  'house_number': instance.house_number,
   'phone': instance.phone,
   'phone2': instance.phone2,
   'web': instance.web,
   'email': instance.email,
-  'googleMapUrl': instance.googleMapUrl,
+  'google_map_url': instance.google_map_url,
   'longitude': instance.longitude,
   'latitude': instance.latitude,
 };

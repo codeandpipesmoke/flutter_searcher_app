@@ -11,11 +11,13 @@ part 'model.g.dart';
 
 @JsonSerializable()
 class Category {
-  Category(this.id, this.icon_id, this.name, this.description);
+  Category(this.id, this.icon_id, this.icon_ext, this.name, this.description);
 
   final int id;
   // ignore: non_constant_identifier_names
   final int icon_id;
+  // ignore: non_constant_identifier_names
+  final String icon_ext;
   final String name;
   final String description;
 
@@ -30,33 +32,49 @@ class Company {
     // ignore: non_constant_identifier_names
     this.icon_id,
     // ignore: non_constant_identifier_names
+    this.icon_ext,
+    // ignore: non_constant_identifier_names
     this.name,
     this.description,
+    // ignore: non_constant_identifier_names
+    this.city_zip,
+    // ignore: non_constant_identifier_names
+    this.city_name,
     this.address,
-    this.houseNumber,
+    // ignore: non_constant_identifier_names
+    this.house_number,
     this.phone,
     this.phone2,
     this.web,
     this.email,
-    this.googleMapUrl,
+    // ignore: non_constant_identifier_names
+    this.google_map_url,
     this.longitude,
     this.latitude,
   );
 
   final int id;
   // ignore: non_constant_identifier_names
-  final int? icon_id;
+  final int icon_id;
+  // ignore: non_constant_identifier_names
+  final String icon_ext;
   final String name;
   final String description;
-  final String? address;
-  final String? houseNumber;
+  // ignore: non_constant_identifier_names
+  final String city_zip;
+  // ignore: non_constant_identifier_names
+  final String city_name;
+  final String address;
+  // ignore: non_constant_identifier_names
+  final String house_number;
   final String phone;
-  final String? phone2;
-  final String? web;
+  final String phone2;
+  final String web;
   final String email;
-  final String? googleMapUrl;
-  final String? longitude;
-  final String? latitude;
+  // ignore: non_constant_identifier_names
+  final String google_map_url;
+  final String longitude;
+  final String latitude;
 
   factory Company.fromJson(dynamic json) => _$CompanyFromJson(json);
   dynamic toJson() => _$CompanyToJson(this);

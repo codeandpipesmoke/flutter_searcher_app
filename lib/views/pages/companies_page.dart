@@ -57,7 +57,7 @@ class _CompaniesPageState extends State<CompaniesPage> {
       }).toList();
       //print('Successfully parsed ${companies.length} companies');
       return companies;
-    } catch (e, stackTrace) {
+    } catch (e) {
       //print('ERROR parsing companies: $e');
       //print('Stack trace: $stackTrace');
       rethrow;
