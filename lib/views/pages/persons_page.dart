@@ -26,12 +26,11 @@ class _PersonsPageState extends State<PersonsPage> {
 
   Future<List<Person>> _loadPerson() async {
     var response = await http.get(
-      Uri.parse('https://kereso.vzsfoto.hu/api/finders/sync/2023-01-01.json'),
+      //Uri.parse('https://kereso.vzsfoto.hu/api/finders/sync/2023-01-01.json'),
+      Uri.parse('http://kereso.loc/api/v1/companies/1.json'),
     );
     var responseBody = response.body;
     var jsonData = jsonDecode(responseBody);
-
-    //print((jsonData['datas']['persons'] as List).map(Person.fromJson).toList());
 
     return (jsonData['datas']['persons'] as List).map(Person.fromJson).toList();
   }
@@ -54,6 +53,7 @@ class _PersonsPageState extends State<PersonsPage> {
           } else {
             return ListView(
               children: [
+                /*
                 for (var persons in snapshot.requireData)
                   if (persons.category_id == widget.id)
                     ContainerWidget(
@@ -61,6 +61,7 @@ class _PersonsPageState extends State<PersonsPage> {
                       name: persons.name,
                       description: persons.description,
                     ),
+                    */
               ],
             );
           }

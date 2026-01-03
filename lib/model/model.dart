@@ -11,63 +11,100 @@ part 'model.g.dart';
 
 @JsonSerializable()
 class Category {
-  Category(this.id, this.name, this.description);
+  Category(this.id, this.icon_id, this.name, this.description);
 
   final int id;
+  // ignore: non_constant_identifier_names
+  final int icon_id;
   final String name;
   final String description;
 
   factory Category.fromJson(dynamic json) => _$CategoryFromJson(json);
   dynamic toJson() => _$CategoryToJson(this);
+}
 
-  //Map<String, dynamic> toJson() => CategoryToJson(this);
+@JsonSerializable()
+class Company {
+  Company(
+    this.id,
+    // ignore: non_constant_identifier_names
+    this.icon_id,
+    // ignore: non_constant_identifier_names
+    this.name,
+    this.description,
+    this.address,
+    this.houseNumber,
+    this.phone,
+    this.phone2,
+    this.web,
+    this.email,
+    this.googleMapUrl,
+    this.longitude,
+    this.latitude,
+  );
 
-  /*
-  factory CategoriesModel.fromJson(dynamic json) =>
-      _$CategoriesModelFromJson(json);
-  dynamic toJson() => _$CategoriesModelToJson(this);
-*/
-  /*
-  CategoriesModel.fromJson(Map<String, dynamic> json)
-      : id = json['id'] as String,
-        name = json['name'] as String,
-        description = json['description'] as String;
-  Map<String, dynamic> toJson() => {'id': id, 'name': name, 'description': description};
- */
+  final int id;
+  // ignore: non_constant_identifier_names
+  final int? icon_id;
+  final String name;
+  final String description;
+  final String? address;
+  final String? houseNumber;
+  final String? phone;
+  final String? phone2;
+  final String? web;
+  final String? email;
+  final String? googleMapUrl;
+  final String? longitude;
+  final String? latitude;
+
+  factory Company.fromJson(dynamic json) => _$CompanyFromJson(json);
+  dynamic toJson() => _$CompanyToJson(this);
 }
 
 @JsonSerializable()
 class Person {
   final int id;
   // ignore: non_constant_identifier_names
-  final int category_id;
+  final int icon_id;
   // ignore: non_constant_identifier_names
-  final int city_id;
+  final int category_id;
   final String name;
   final String description;
-  final String web;
-  final String address;
-  final String more;
+  final String openingTime;
   final String phone;
-  final String ext;
+  final String phone2;
+  final String phone3;
+  final String phone4;
+  final String phone5;
+  final String email;
+  final String email2;
+  final String web;
+  final String facebook;
+  final String youtube;
 
   // ignore: non_constant_identifier_names
   Person({
     required this.id,
     // ignore: non_constant_identifier_names
-    required this.category_id,
+    required this.icon_id,
     // ignore: non_constant_identifier_names
-    required this.city_id,
+    required this.category_id,
     required this.name,
     required this.description,
-    required this.web,
-    required this.address,
-    required this.more,
+    required this.openingTime,
     required this.phone,
-    required this.ext,
+    required this.phone2,
+    required this.phone3,
+    required this.phone4,
+    required this.phone5,
+    required this.email,
+    required this.email2,
+    required this.web,
+    required this.facebook,
+    required this.youtube,
   });
 
   factory Person.fromJson(dynamic json) => _$PersonFromJson(json);
-
   dynamic toJson() => _$PersonToJson(this);
 }
