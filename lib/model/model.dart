@@ -50,10 +50,10 @@ class Company {
   final String description;
   final String? address;
   final String? houseNumber;
-  final String? phone;
+  final String phone;
   final String? phone2;
   final String? web;
-  final String? email;
+  final String email;
   final String? googleMapUrl;
   final String? longitude;
   final String? latitude;

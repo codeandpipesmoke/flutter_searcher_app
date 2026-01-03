@@ -8,9 +8,10 @@ import 'package:http/http.dart' as http;
 import '../../widgets/company_widget.dart';
 
 class CompaniesPage extends StatefulWidget {
-  const CompaniesPage({super.key, required this.id});
+  const CompaniesPage({super.key, required this.id, required this.name});
 
   final int id;
+  final String name;
 
   @override
   State<CompaniesPage> createState() => _CompaniesPageState();
@@ -72,7 +73,7 @@ class _CompaniesPageState extends State<CompaniesPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Companies')),
+      appBar: AppBar(title: Text(widget.name)),
       body: FutureBuilder(
         future: _CompanyRequest,
         builder: (context, snapshot) {
@@ -120,6 +121,8 @@ class _CompaniesPageState extends State<CompaniesPage> {
                   id: company.id,
                   name: company.name,
                   description: company.description,
+                  phone: company.phone,
+                  email: company.email,
                 ),
             ],
           );

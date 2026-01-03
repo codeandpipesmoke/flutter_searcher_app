@@ -7,11 +7,15 @@ class CompanyWidget extends StatelessWidget {
     required this.id,
     required this.name,
     required this.description,
+    required this.phone,
+    required this.email,
   });
 
   final int id;
   final String name;
   final String description;
+  final String phone;
+  final String email;
 
   @override
   Widget build(BuildContext context) {
@@ -24,11 +28,37 @@ class CompanyWidget extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(
-                name,
-                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+              Column(
+                children: [
+                  Row(
+                    children: [
+                      Expanded(
+                        child: Text(
+                          name,
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 16,
+                          ),
+                        ),
+                      ),
+                      Expanded(child: Text(phone, textAlign: TextAlign.end)),
+                    ],
+                  ),
+                  Row(
+                    children: [
+                      Expanded(
+                        child: Text(
+                          description,
+                          style: TextStyle(
+                            fontWeight: FontWeight.normal,
+                            fontSize: 14,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
               ),
-              Text(description),
             ],
           ),
         ),
